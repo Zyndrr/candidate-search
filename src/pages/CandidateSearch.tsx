@@ -31,22 +31,23 @@ const CandidateSearch = () => {
     const fetchData = async () => {
       const data = await searchGithub();
       setCandidates(data);
-      const candidateData = await searchGithubUser(data[0].login);
-      setCandidateIndex(0);
+      const candidateData = await searchGithubUser(data[candidateIndex].login);
+      setCandidateIndex(candidateIndex);
       setSelectedCandidate(candidateData);
       setLoading(false);
     };
     fetchData();
   }, []);
 
-  const advanceCandidate = () => {
+  const advanceCandidate = async () => {
     const newIndex = candidateIndex + 1;
     if (newIndex >= candidates.length) {
       setError("No more candidates to show");
       return;
     }
     setCandidateIndex(newIndex);
-    setSelectedCandidate(candidates[newIndex]);
+    const candidateData = await searchGithubUser(candidates[newIndex].login);
+    setSelectedCandidate(candidateData);
   };
   return (
     <div>
@@ -114,16 +115,16 @@ const CandidateSearch = () => {
                 sx={{ display: "flex", justifyContent: "space-between" }}
               >
                 <IconButton
-                  onClick={() => {
-                    advanceCandidate();
+                  onClick={async () => {
+                    await advanceCandidate();
                   }}
                 >
                   <Remove fontSize="inherit" />
                 </IconButton>
                 <IconButton
-                  onClick={() => {
+                  onClick={async () => {
                     addCandidate(selectedCandidate);
-                    advanceCandidate();
+                    await advanceCandidate();
                   }}
                 >
                   <Add fontSize="inherit" />
