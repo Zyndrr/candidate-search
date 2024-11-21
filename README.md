@@ -1,33 +1,39 @@
-# React + TypeScript + Vite
+# Candidate Search
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+## Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a very simple candidate search using the Github API. This only searching through Github users displaying 1 at a time till you compleate and view your candidate list
 
-Currently, two official plugins are available:
+## Table of Contents
 
-* [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md), which uses [Babel](https://babeljs.io/) for Fast Refresh
-* [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc), which uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Usage](#usage)
+- [How to Contribute](#how-to-contribute)
+- [License](#license)
+- [Tests](#tests)
+- [Questions](#questions)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you're developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+npm install
 
-* Configure the top-level `parserOptions` property as follows:
+## Usage
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+ "build": "tsc && vite build"
 
-* Replace `plugin:@typescript-eslint/recommended` with `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`.
-* Optionally, add `plugin:@typescript-eslint/stylistic-type-checked`.
-* Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` and `plugin:react/jsx-runtime` to the `extends` list.
+## How to Contribute
 
----
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Anyone can contribute, please submit a PR
+
+## License
+
+MIT
+
+## Tests
+
+## Tests
+
+## Questions
+
+- GitHub Username: [Zyndrr](https://github.com/Zyndrr)
+- Email: [erin.d.mckanna@gmail.com](mailto:erin.d.mckanna@gmail.com)
